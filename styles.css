@@ -1,65 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    height: 100%;
 }
 
 #app {
     display: flex;
-    flex: 1;
+    flex-direction: column;
+    height: 100%;
 }
 
-#components-panel {
-    width: 200px;
+#toolbar {
     background-color: #f0f0f0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#components-panel button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
     padding: 10px;
+    display: flex;
+    gap: 10px;
 }
 
-#builder {
+#mainContent {
+    display: flex;
     flex: 1;
+}
+
+#componentList {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#editor {
+    flex: 1;
+    display: flex;
+}
+
+#codeEditor {
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
-#preview, #code-view {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
+#htmlEditor, #cssEditor, #jsEditor {
+    height: 33.33%;
+}
+
+#previewPane {
+    width: 50%;
+    border-left: 1px solid #ccc;
+    padding: 10px;
     overflow-y: auto;
 }
 
-#preview {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+.CodeMirror {
+    height: 100%;
 }
 
-#code-view {
-    background-color: #f8f8f8;
+.component {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: move;
 }
 
-#code-view pre {
-    margin: 0;
-    white-space: pre-wrap;
+.editable {
+    border: 1px dashed #999;
+    padding: 5px;
+    margin: 5px 0;
 }
 
-#download-panel {
-    padding: 20px;
-    background-color: #e0e0e0;
-    text-align: center;
-}
-
-#download-panel button {
-    margin: 0 10px;
-    padding: 10px 20px;
+.editable:focus {
+    outline: none;
+    border-color: #0066cc;
 }
