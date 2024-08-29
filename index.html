@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Builder</title>
+    <title>Advanced Website Builder</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
 </head>
 <body>
     <div id="app">
-        <div id="components-panel">
-            <h2>Components</h2>
-            <button data-component="header">Header</button>
-            <button data-component="paragraph">Paragraph</button>
-            <button data-component="image">Image</button>
-            <button data-component="button">Button</button>
+        <div id="toolbar">
+            <button id="addComponent">Add Component</button>
+            <select id="templateSelect">
+                <option value="">Select Template</option>
+                <option value="blog">Blog Template</option>
+                <option value="portfolio">Portfolio Template</option>
+                <option value="landing">Landing Page Template</option>
+            </select>
+            <button id="changeTheme">Change Theme</button>
+            <button id="saveProject">Save Project</button>
+            <button id="loadProject">Load Project</button>
+            <button id="exportFiles">Export Files</button>
         </div>
-        <div id="builder">
-            <div id="preview">
-                <h2>Preview</h2>
-                <div id="preview-content"></div>
-            </div>
-            <div id="code-view">
-                <h2>Code</h2>
-                <pre><code id="html-code"></code></pre>
+        <div id="mainContent">
+            <div id="componentList"></div>
+            <div id="editor">
+                <div id="codeEditor">
+                    <div id="htmlEditor"></div>
+                    <div id="cssEditor"></div>
+                    <div id="jsEditor"></div>
+                </div>
+                <div id="previewPane"></div>
             </div>
         </div>
     </div>
-    <div id="download-panel">
-        <button id="download-combined">Download Combined HTML</button>
-        <button id="download-html">Download HTML</button>
-        <button id="download-css">Download CSS</button>
-        <button id="download-js">Download JS</button>
-    </div>
-    <script src="builder.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
