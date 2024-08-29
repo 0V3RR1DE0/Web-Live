@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="components-panel">
+            <h2>Components</h2>
+            <button data-component="header">Header</button>
+            <button data-component="paragraph">Paragraph</button>
+            <button data-component="image">Image</button>
+            <button data-component="button">Button</button>
+        </div>
+        <div id="builder">
+            <div id="preview">
+                <h2>Preview</h2>
+                <div id="preview-content"></div>
+            </div>
+            <div id="code-view">
+                <h2>Code</h2>
+                <pre><code id="html-code"></code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="download-panel">
+        <button id="download-combined">Download Combined HTML</button>
+        <button id="download-html">Download HTML</button>
+        <button id="download-css">Download CSS</button>
+        <button id="download-js">Download JS</button>
+    </div>
+    <script src="builder.js"></script>
+</body>
+</html>
