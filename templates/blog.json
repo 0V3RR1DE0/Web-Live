@@ -1,1 +1,5 @@
-
+{
+  "html": "<header>\n  <h1>My Blog</h1>\n  <nav>\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><a href=\"#\">About</a></li>\n      <li><a href=\"#\">Contact</a></li>\n    </ul>\n  </nav>\n</header>\n<main>\n  <article>\n    <h2>Welcome to My Blog</h2>\n    <p>This is a sample blog post. You can edit this content to create your own blog posts.</p>\n  </article>\n  <article>\n    <h2>Another Blog Post</h2>\n    <p>Here's another sample blog post. Feel free to add more articles or modify the existing ones.</p>\n  </article>\n</main>\n<footer>\n  <p>&copy; 2024 My Blog. All rights reserved.</p>\n</footer>",
+  "css": "body {\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n  color: #333;\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\nheader {\n  background-color: #f4f4f4;\n  padding: 1rem;\n  margin-bottom: 1rem;\n}\n\nnav ul {\n  list-style-type: none;\n  padding: 0;\n}\n\nnav ul li {\n  display: inline;\n  margin-right: 10px;\n}\n\narticle {\n  background-color: #fff;\n  border: 1px solid #ddd;\n  padding: 1rem;\n  margin-bottom: 1rem;\n}\n\nfooter {\n  text-align: center;\n  margin-top: 2rem;\n  font-size: 0.8rem;\n}",
+  "js": "// Add any JavaScript functionality here\nconsole.log('Blog template loaded');"
+}
